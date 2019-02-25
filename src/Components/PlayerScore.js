@@ -10,7 +10,8 @@ export default class PlayerScore extends Component {
   }
   render() {
     return <div className="scoreboard">
-            <h2 className="player">Player One</h2>
+            <h2 className="player">Player Score</h2>
+            <h3 className="p-score">0</h3>
           </div>
   }
 }
