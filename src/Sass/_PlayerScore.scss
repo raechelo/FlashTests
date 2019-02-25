@@ -1,16 +1,16 @@
 .scoreboard {
-  background-color: #046380;
+  background-color: $scoreboard;
   display: inline-block;
-  opacity: .6;
-  width: 20%;
+  opacity: .75;
+  margin: 10px 0;
+  width: 40%;
 }
 
 .scoreboard h1 {
   margin: 0;
 }
 
-.player {
-  color: hsla(315, 75%, 15%, 1);
-  font-family: 'Rock Salt', cursive;
-  text-align: center;
+.player, .p-score {
+  color: $playername;
+  font-family: $hfont;
 }
