@@ -1,9 +1,20 @@
+.reg-q {
+  font-family: $bodyfont;
+  font-size: 16px;
+  color: white;
+}
+
 .reg-q img {
   display: block;
   margin: 5% auto;
-  max-width: 200px;
+  max-width: 550px;
+  max-height: 200px;
 }
 
-.hidden-ans {
-  display: hidden;
+.toggled {
+  visibility: hidden;
+}
+
+.notToggled {
+  visibility: visible
 }

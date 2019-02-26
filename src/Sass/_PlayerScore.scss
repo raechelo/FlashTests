@@ -1,8 +1,10 @@
 .scoreboard {
   background-color: $scoreboard;
-  display: inline-block;
+  border-radius: 25px;
+  box-shadow: 4px 4px 4px $playershadow;
+  display: block;
   opacity: .75;
-  margin: 10px 0;
+  margin: auto;
   width: 40%;
 }
 

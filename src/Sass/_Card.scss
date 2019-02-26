@@ -1,9 +1,11 @@
 .card {
   background-color: $board;
-  opacity: .85;
-  display: inline-block;
-  height: 500px;
-  margin: 0px 40px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px $boardshadow;
+  display: block;
+  height: 450px;
+  margin: auto;
+  padding: 5px;
   width: 70%;
 }
 
@@ -21,6 +23,7 @@
   background-color: $btnpink;
   border: none;
   border-radius: 5px;
+  box-shadow: 3px 3px 3px $btnshadow;
   font-family: $bodyfont;
   font-weight: 900;
   height: 25px;
@@ -32,3 +35,4 @@
     cursor: pointer;
   }
 }
+
