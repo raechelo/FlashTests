@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board should match the snapshot with all the data passed in 1`] = `
+<div
+  className="card-board"
+>
+  <Card
+    ansBank={Array []}
+    nextQ={[Function]}
+    q={Object {}}
+    startG={[Function]}
+  />
+  <PlayerScore />
+</div>
+`;

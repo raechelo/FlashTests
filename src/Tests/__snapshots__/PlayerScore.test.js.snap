@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayerScore should match the snapshot with all the data passed in 1`] = `
+<div
+  className="scoreboard"
+>
+  <h2
+    className="player"
+  >
+    Player Score
+  </h2>
+  <h3
+    className="p-score"
+  >
+    0
+  </h3>
+</div>
+`;

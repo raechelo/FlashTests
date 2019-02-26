@@ -17,7 +17,7 @@ describe('Board', () => {
   });
 
   it('should have the proper default state', () => {
-    expect(wrapper.state).toEqual( {
+    expect(wrapper.state()).toEqual( {
       questions: [], currQ: {}, answerBank: []
     })
   });

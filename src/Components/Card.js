@@ -7,7 +7,8 @@ export default class Card extends Component {
     super(props);
     this.state = {
      currQ: {},
-     ansBank: []
+     ansBank: [],
+     displayQ: false
     }
   }
 
@@ -21,7 +22,6 @@ export default class Card extends Component {
     
     const multiclue = 
     <M 
-    cq={this.props.cq} 
     iq={this.props.iq} 
     qObj={this.state.currQ} 
     q={this.state.currQ.question} 
@@ -33,7 +33,6 @@ export default class Card extends Component {
 
     const clue = 
     <Q 
-    cq={this.props.cq} 
     iq={this.props.iq} 
     qObj={this.state.currQ} 
     q={this.state.currQ.question} 

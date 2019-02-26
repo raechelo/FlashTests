@@ -39,7 +39,6 @@ export default class Board extends Component {
           <Card q={this.state.currQ} 
           nextQ={this.shuffleQs} 
           ansBank={this.state.answerBank} 
-          cq={this.props.cq}
           iq={this.props.iq}
           startG={this.shuffleAs}
           saveToStore={this.props.saveToStore}

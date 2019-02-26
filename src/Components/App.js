@@ -8,7 +8,6 @@ class App extends Component {
     this.state = {
       questions : [],
       incorrect: [],
-      correct: []
     }
   }
 
@@ -31,20 +30,19 @@ class App extends Component {
   }
   
   studyOldCards() {
-    JSON.parse(localStorage.getItem("savedForStudy"))
+    let localStorageCards = JSON.parse(localStorage.getItem("savedForStudy"))
     this.setState( {questions: this.localStorageCards} )
   }
 
   clearStorage() {
-    
+
   }
 
   render() {
     return (
       <div className="gameboard">
         <Header />
-        <Board cq={this.state.correct} 
-        iq={this.state.incorrect} 
+        <Board iq={this.state.incorrect} 
         questions={this.state.questions} 
         saveToStore={this.saveToStorage}
         oldCards={this.studyOldCards}

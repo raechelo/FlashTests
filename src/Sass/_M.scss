@@ -1,0 +1,20 @@
+.multi-q {
+  font-family: $bodyfont;
+  font-size: 28px;
+}
+
+.multi-q button {
+  background-color: #F5E1DF;
+  border-radius: 5px;
+  border: 1px solid #F5E1DF;
+  box-shadow: 1px 1px 2px #BDAEAC;
+  display: block;
+  font-size: 14px;
+  height: 25px;
+  margin: 15px auto;
+  &:hover {
+    background-color: $btnpink;
+    box-shadow: 1px 1px 2px $btnshadow;
+    border: 1px solid $btnpink;
+  }
+}

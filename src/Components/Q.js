@@ -7,7 +7,8 @@ export default class Q extends Component {
       userAns: '',
       ansToggle: false,
       btnDisable: false,
-      displayMsg: false
+      displayMsg: false,
+      correctA: false
     }
   }
 
@@ -17,8 +18,9 @@ export default class Q extends Component {
 
   checkAns = () => {
     if (this.state.userAns === this.props.a && !this.props.cq.includes(this.props.qObj)) {
-      this.props.cq.push(this.props.qObj)
+      this.setState( {correctA: true} )
       } else if (this.state.userAns !== this.props.a && !this.props.iq.includes(this.props.qObj)) {
+      this.setState( {correctA: false} )
       this.props.iq.push(this.props.qObj)
       this.props.saveToStore()
     }
