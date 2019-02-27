@@ -19,5 +19,5 @@ describe('Card', () => {
 
   it('should have the proper default state', () => {
     expect(wrapper.state()).toEqual( {currQ: {}, ansBank: [], displayQ: false} )
-  })
+  });
 })

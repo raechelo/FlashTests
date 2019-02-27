@@ -21,4 +21,12 @@ describe('Board', () => {
       questions: [], currQ: {}, answerBank: []
     })
   });
+
+
 })
+
+
+
+return imagesArr.slice(-10).forEach((photo) => generateCard(photo))
+
+
