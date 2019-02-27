@@ -4,34 +4,39 @@ export default class Q extends Component {
   constructor() {
     super();
     this.state = {
-      value: ''
+      userAns: '',
+      ansToggle: false,
+      btnDisable: false,
+      displayMsg: false,
+      correctA: false
     }
   }
 
   handleChange = () => {
-    this.setState( {value: window.event.target.value} )
+    this.setState( {userAns: window.event.target.value} )
   }
 
-  //this is working but is not adding immediately to the correct array, though it is pushing into the array on the next question button instead of the check answer button
-  // likely because i am changing state with the button
-
-  checkAns =() => {
-    if (this.state.value === this.props.a) {
-      this.props.cq.push(this.props.qObj)
-    } else {
+  checkAns = () => {
+    if (this.state.userAns === this.props.a && !this.props.cq.includes(this.props.qObj)) {
+      this.setState( {correctA: true} )
+      } else if (this.state.userAns !== this.props.a && !this.props.iq.includes(this.props.qObj)) {
+      this.setState( {correctA: false} )
       this.props.iq.push(this.props.qObj)
+      this.props.saveToStore()
     }
+    this.setState( {ansToggle: !this.state.ansToggle, btnDisable: !this.state.btnDisable, displayMsg: !this.state.displayMsg } )
   }
 
   render() {
+
     return (
       <div className="reg-q">
         <img src={this.props.q} />
         <input type="text"
         value={this.state.value}
         onChange={this.handleChange} />
-        <h5 className="hidden-ans">{this.props.a}</h5>
-        <button className="card-btn" onClick={this.checkAns}>check answer</button>
+        <h3>{this.state.ansToggle === true ? 'You got it, dude!' : `Sorry, that's incorrect! The answer is ${this.props.a}` }</h3>
+        <button type="button" className="card-btn" onClick={this.checkAns}>check answer</button>
       </div>
     )
   }

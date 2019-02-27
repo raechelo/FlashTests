@@ -1,9 +1,16 @@
 .card {
   background-color: $board;
-  opacity: .85;
-  display: inline-block;
-  height: 500px;
-  margin: 0px 40px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px $boardshadow;
+  display: grid;
+  grid-template-areas: 
+  "pic"
+  "btn"
+  "start";
+  grid-template-rows: 2fr 1fr 1fr;
+  height: 450px;
+  margin: auto;
+  padding: 5px;
   width: 70%;
 }
 
@@ -21,9 +28,12 @@
   background-color: $btnpink;
   border: none;
   border-radius: 5px;
+  box-shadow: 3px 3px 3px $btnshadow;
   font-family: $bodyfont;
+  font-size: 14px;
   font-weight: 900;
-  height: 25px;
+  grid-area: start;
+  height: 35px;
   letter-spacing: .5px;
   margin: 25px;
   text-transform: uppercase;
@@ -32,3 +42,4 @@
     cursor: pointer;
   }
 }
+

@@ -17,8 +17,16 @@ describe('Board', () => {
   });
 
   it('should have the proper default state', () => {
-    expect(wrapper.state).toEqual( {
+    expect(wrapper.state()).toEqual( {
       questions: [], currQ: {}, answerBank: []
     })
   });
+
+
 })
+
+
+
+return imagesArr.slice(-10).forEach((photo) => generateCard(photo))
+
+

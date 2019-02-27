@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot with all the data passed in 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="qCard"
+  >
+    <Q
+      qObj={Object {}}
+    />
+    <div
+      className="card-btns"
+    >
+      <button
+        className="card-btn"
+      >
+        Next Question
+      </button>
+      <button
+        className="card-btn"
+      >
+        Start Game
+      </button>
+      <button
+        className="card-btn"
+      >
+        Study Old Cards
+      </button>
+    </div>
+  </div>
+</div>
+`;

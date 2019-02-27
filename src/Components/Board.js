@@ -7,9 +7,15 @@ export default class Board extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      questions: this.props.questions,
+      questions: [],
       currQ: {},
       answerBank: [],
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps !== this.props) {
+      this.setState( {questions: this.props.questions} )
     }
   }
 
@@ -29,16 +35,15 @@ export default class Board extends Component {
 
   render() {
     return (
-        <div className="card-board">
+        <div className="card-board" >
           <Card q={this.state.currQ} 
           nextQ={this.shuffleQs} 
           ansBank={this.state.answerBank} 
-          cq={this.props.cq}
           iq={this.props.iq}
+          startG={this.shuffleAs}
+          saveToStore={this.props.saveToStore}
+          oldCards={this.oldCards}
           />
-          <button 
-          onClick={this.shuffleAs}>
-          Start Game</button>
           <PlayerScore />
         </div>
     )

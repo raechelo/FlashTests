@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match the snapshot with all the data passed in 1`] = `
+<div
+  className="Header"
+>
+  <img
+    alt="Flash Tests"
+    src="header.png"
+  />
+</div>
+`;
